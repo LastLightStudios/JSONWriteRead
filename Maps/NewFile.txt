@@ -1,0 +1,76 @@
+{
+    "py/object": "RoomManager.RoomManager",
+    "current_room": {
+        "py/object": "RoomManager.Room",
+        "manager": {
+            "py/id": 0
+        },
+        "description": "This is the starting room.",
+        "name": "Home",
+        "connected_rooms": {
+            "Left": {
+                "py/object": "RoomManager.Room",
+                "manager": {
+                    "py/id": 0
+                },
+                "description": "Welcome to the Left Room.",
+                "name": "Left Room",
+                "connected_rooms": {
+                    "Right": {
+                        "py/id": 1
+                    }
+                },
+                "inventory": []
+            },
+            "Right": {
+                "py/object": "RoomManager.Room",
+                "manager": {
+                    "py/id": 0
+                },
+                "description": "Welcome to the dining room.",
+                "name": "Right Room",
+                "connected_rooms": {
+                    "Left": {
+                        "py/id": 1
+                    },
+                    "Forward": {
+                        "py/object": "RoomManager.Room",
+                        "manager": {
+                            "py/id": 0
+                        },
+                        "description": "This is the kitchen. There is a dirty pot on the stove and two more in the sink.",
+                        "name": "Kitchen",
+                        "connected_rooms": {
+                            "Backwards": {
+                                "py/id": 6
+                            },
+                            "Left": {
+                                "py/object": "RoomManager.Room",
+                                "manager": {
+                                    "py/id": 0
+                                },
+                                "description": "This is living room. You can see a nice couch. To the right you can see the kitchen.",
+                                "name": "Living Room",
+                                "connected_rooms": {
+                                    "Backwards": {
+                                        "py/id": 1
+                                    },
+                                    "Right": {
+                                        "py/id": 8
+                                    }
+                                },
+                                "inventory": []
+                            }
+                        },
+                        "inventory": []
+                    }
+                },
+                "inventory": []
+            },
+            "Forward": {
+                "py/id": 10
+            }
+        },
+        "inventory": []
+    }
+}

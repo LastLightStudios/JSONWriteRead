@@ -17,11 +17,10 @@ if __name__ == '__main__':
     room_manager = RoomManager()
     room_manager.generate_default_map()
 
-    file1 = open(r"Maps\NewFile.txt", "w")
-    frozen = jsonpickle.encode(room_manager, indent=4, keys=True)
-    file1.write(frozen)
-    #frozen = file1.read()
-    file1.close()
+    with open(r"Maps\NewFile.txt", "w") as file1:
+        frozen = jsonpickle.encode(room_manager, indent=4, keys=True)
+        file1.write(frozen)
+        #frozen = file1.read()
     thawed = jsonpickle.decode(frozen)
     #assert room_manager.rooms["Left Room"] == thawed.rooms["Left Room"]
     print(thawed.rooms["Left Room"].name)

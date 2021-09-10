@@ -1,6 +1,11 @@
+from __future__ import annotations
+from dataclasses import dataclass, field
+
+
+@dataclass
 class RoomManager(object):
-    rooms = {}
-    current_room = None
+    rooms: dict = field(default_factory=dict)
+    current_room: Room = None
 
     def add_room(self, new_room):
         if new_room.name in self.rooms:
